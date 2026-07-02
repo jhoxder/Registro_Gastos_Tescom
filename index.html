@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TESCOM · Plataforma de gastos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="app" id="appRoot" style="display:none;">
+
+  <div id="navMount"></div>
+
+  <h1 style="margin-bottom:6px;">Plataforma de gastos</h1>
+  <p style="color:var(--muted);font-size:13.5px;margin-bottom:24px;">Elige qué quieres hacer.</p>
+
+  <div class="menu-grid">
+    <a class="menu-card" href="captura.html">
+      <div class="menu-card-title">Captura</div>
+      <div class="menu-card-desc">Registrar un gasto nuevo: datos generales, distribución por área/sede/grupo, subsidio y documentos adjuntos.</div>
+    </a>
+
+    <div class="menu-card disabled">
+      <div class="menu-card-title">Seguimiento</div>
+      <div class="menu-card-desc">Tabla filtrable: pendientes de liquidar, por semana, por tipo de gasto, por sede, etc.</div>
+      <span class="menu-card-tag">Próximamente</span>
+    </div>
+
+    <div class="menu-card disabled">
+      <div class="menu-card-title">Liquidaciones</div>
+      <div class="menu-card-desc">Gastos liquidados agrupados por código de liquidación.</div>
+      <span class="menu-card-tag">Próximamente</span>
+    </div>
+
+    <div class="menu-card disabled">
+      <div class="menu-card-title">Calendario</div>
+      <div class="menu-card-desc">Vista de calendario con los pagos programados.</div>
+      <span class="menu-card-tag">Próximamente</span>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="shared.js"></script>
+<script>
+  TescomAuth.init('inicio', async () => {
+    // La portada no necesita cargar datos por ahora.
+  });
+</script>
+</body>
+</html>
